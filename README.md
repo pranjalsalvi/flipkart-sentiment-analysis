@@ -1,39 +1,151 @@
-# Sentiment Analysis of Real-time Flipkart Product Reviews
+# 🛒 Flipkart Product Review Sentiment Analysis | NLP & Machine Learning
 
-## 📌 Project Overview
+> **An end-to-end Natural Language Processing (NLP) project that analyzes real-world Flipkart product reviews using Machine Learning to classify customer sentiment and uncover actionable business insights from customer feedback.**
 
-This project focuses on performing **Sentiment Analysis on real-time Flipkart product reviews** using Machine Learning techniques. The objective is to classify customer reviews into **Positive** and **Negative** sentiments and identify key pain points from negative feedback to improve product quality and customer satisfaction.
-
-This project emphasizes **data analysis, text preprocessing, model building, and evaluation**, without advanced MLOps automation.
-
----
-
-## 🎯 Objectives
-
-* Analyze real-time Flipkart product reviews
-* Classify reviews as **Positive** or **Negative**
-* Understand common reasons for negative reviews
-* Build and evaluate machine learning models for sentiment classification
-* Gain practical experience in NLP and text analytics
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-F7931E?logo=scikitlearn)
+![NLTK](https://img.shields.io/badge/NLTK-NLP-green)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-orange)
 
 ---
 
-## 🧠 Technologies Used
+## 📖 Project Overview
 
-### Programming & Libraries
+Customer reviews provide valuable insights into product quality, customer satisfaction, and overall shopping experience. However, manually analyzing thousands of reviews is time-consuming and inefficient.
 
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-* Matplotlib, Seaborn
-* NLTK / TextBlob (for text preprocessing)
+This project develops a **Machine Learning-based Sentiment Analysis System** that automatically classifies Flipkart product reviews as **Positive** or **Negative**. The solution applies Natural Language Processing (NLP) techniques to preprocess textual data, transform reviews into numerical representations, and train classification models capable of predicting customer sentiment.
+
+Beyond sentiment classification, the project helps identify recurring customer concerns and provides data-driven recommendations for improving products and services.
+
+---
+
+## 🎯 Project Objectives
+
+* Analyze customer opinions from Flipkart product reviews
+* Build an automated sentiment classification model
+* Apply NLP techniques for text preprocessing
+* Compare multiple machine learning algorithms
+* Generate business insights from customer feedback
+* Demonstrate an end-to-end NLP workflow
+
+---
+
+## ✨ Key Features
+
+### Data Exploration
+
+* Review distribution analysis
+* Rating distribution
+* Missing value handling
+* Exploratory data analysis
+
+### NLP Preprocessing
+
+* Text cleaning
+* Lowercase conversion
+* Stopword removal
+* Punctuation removal
+* Tokenization
+* TF-IDF Vectorization
+
+### Machine Learning
+
+* Binary sentiment classification
+* Model comparison
+* Performance evaluation
+* Feature extraction using TF-IDF
+
+### Business Intelligence
+
+* Identify common customer complaints
+* Discover positive product attributes
+* Support product improvement decisions
+
+---
+
+## 🏗️ Project Workflow
+
+```text
+Flipkart Reviews
+        │
+        ▼
+Data Cleaning
+        │
+        ▼
+Text Preprocessing
+        │
+        ▼
+TF-IDF Vectorization
+        │
+        ▼
+Machine Learning Models
+        │
+        ▼
+Model Evaluation
+        │
+        ▼
+Sentiment Prediction & Business Insights
+```
+
+---
+
+## 📊 Dataset Overview
+
+| Attribute       | Details                         |
+| --------------- | ------------------------------- |
+| Source          | Flipkart Product Reviews        |
+| Domain          | E-commerce                      |
+| Input Features  | Review Text, Rating             |
+| Target Variable | Sentiment (Positive / Negative) |
+
+Sentiment labels are generated using review ratings and textual polarity.
+
+---
+
+## 🤖 Machine Learning Models
+
+The following classification algorithms were implemented and evaluated:
+
+| Model                        | Purpose                               |
+| ---------------------------- | ------------------------------------- |
+| Logistic Regression          | Sentiment Classification              |
+| Multinomial Naive Bayes      | Sentiment Classification              |
+| Support Vector Machine (SVM) | Sentiment Classification *(Optional)* |
+
+---
+
+## 📈 Model Evaluation
+
+Models are evaluated using:
+
+* Accuracy
+* Precision
+* Recall
+* F1-Score
+* Confusion Matrix
+
+The best-performing model is selected based on overall classification performance.
+
+---
+
+## 🛠️ Technology Stack
+
+| Category                | Technologies        |
+| ----------------------- | ------------------- |
+| Programming             | Python              |
+| Data Analysis           | Pandas, NumPy       |
+| NLP                     | NLTK, TextBlob      |
+| Feature Engineering     | TF-IDF Vectorizer   |
+| Machine Learning        | Scikit-learn        |
+| Visualization           | Matplotlib, Seaborn |
+| Development Environment | Jupyter Notebook    |
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 Flipkart-Sentiment-Analysis/
 │
 ├── data/
@@ -42,7 +154,7 @@ Flipkart-Sentiment-Analysis/
 ├── notebooks/
 │   ├── data_loading_exploration.ipynb
 │   ├── text_preprocessing.ipynb
-│   ├── model_training_evaluation.ipynb
+│   └── model_training_evaluation.ipynb
 │
 ├── results/
 │   ├── confusion_matrix.png
@@ -54,92 +166,85 @@ Flipkart-Sentiment-Analysis/
 
 ---
 
-## 🔍 Dataset Description
+## 🚀 Getting Started
 
-* **Source:** Flipkart product reviews
-* **Attributes:**
+### Clone the Repository
 
-  * Review Text
-  * Rating
-* **Target Variable:**
+```bash
+git clone https://github.com/pranjalsalvi/flipkart-sentiment-analysis.git
 
-  * Sentiment (Positive / Negative)
+cd flipkart-sentiment-analysis
+```
 
-Sentiment labels are derived based on review ratings and textual polarity.
+### Install Dependencies
 
----
+```bash
+pip install -r requirements.txt
+```
 
-## ⚙️ Project Workflow
+### Launch Jupyter Notebook
 
-### 1️⃣ Data Loading & Exploration
+```bash
+jupyter notebook
+```
 
-* Load the dataset using Pandas
-* Handle missing values
-* Analyze rating and sentiment distribution
-
-### 2️⃣ Text Preprocessing
-
-* Convert text to lowercase
-* Remove punctuation and stopwords
-* Tokenization
-* Text vectorization using **TF-IDF**
-
-### 3️⃣ Model Building
-
-Machine learning models used:
-
-* Logistic Regression
-* Naive Bayes
-* Support Vector Machine (optional)
+Run the notebooks sequentially to reproduce the complete workflow.
 
 ---
 
-## 📊 Model Evaluation
+## 💡 Key Business Insights
 
-Models are evaluated using:
-
-* Accuracy
-* Precision
-* Recall
-* F1-score
-* Confusion Matrix
-
-The best-performing model is selected based on evaluation metrics.
+* Positive reviews frequently mention product quality, affordability, and overall satisfaction.
+* Negative reviews commonly highlight delivery delays, damaged products, poor packaging, and customer service concerns.
+* Automated sentiment analysis enables businesses to monitor customer feedback at scale and respond proactively to recurring issues.
+* NLP-driven insights support data-informed decisions for product improvement and customer experience enhancement.
 
 ---
 
-## 📈 Results & Insights
+## 📌 Applications
 
-* Positive reviews highlight product quality and value
-* Negative reviews reveal issues such as delivery delays, product defects, and packaging problems
-* The trained model effectively classifies customer sentiment with good accuracy
+This project can be applied to:
 
----
-
-## 🏁 Conclusion
-
-This project demonstrates how **Natural Language Processing and Machine Learning** can be used to analyze customer opinions from e-commerce platforms. The insights gained from sentiment analysis can help businesses improve their products and services based on real customer feedback.
+* Customer Feedback Analysis
+* Product Review Mining
+* Brand Reputation Monitoring
+* Voice of Customer (VoC) Analytics
+* E-commerce Recommendation Systems
+* Customer Experience Analytics
 
 ---
 
 ## 🚀 Future Enhancements
 
-* Implement deep learning models (LSTM, BERT)
-* Perform real-time sentiment prediction using APIs
-* Deploy the model using Flask or FastAPI
-* Extend analysis to multi-class sentiment (Positive, Neutral, Negative)
+* Deep Learning models (LSTM, GRU)
+* Transformer-based models (BERT, RoBERTa)
+* Multi-class sentiment analysis (Positive, Neutral, Negative)
+* Aspect-Based Sentiment Analysis (ABSA)
+* Real-time prediction using Flask or FastAPI
+* Interactive Streamlit dashboard
+* Deployment using Docker and cloud platforms
 
 ---
 
-## 👤 Author
+## 👨‍💻 About Me
 
 **Pranjal Salvi**
-Data Science Student
+
+Aspiring **Data Analyst & AI Engineer** passionate about Data Analytics, Natural Language Processing, Machine Learning, and Generative AI.
+
+### Connect with me
+
+* 🔗 LinkedIn: https://www.linkedin.com/in/pranjal-salvi-380732227/
+* 💻 GitHub: https://github.com/pranjalsalvi
 
 ---
 
-## ⭐ Acknowledgements
+## ⭐ Support
 
-* Flipkart Reviews Dataset
-* Scikit-learn & NLP libraries
-* Open-source data science community
+If you found this project useful or interesting, consider giving it a ⭐ on GitHub.
+
+Your support motivates me to continue building and sharing Data Science, AI, and Machine Learning projects.
+
+---
+
+### Thank you for visiting this repository! 🚀
